@@ -1,0 +1,14 @@
+.single-movie-title, .overview-header {
+  font-family: 'Metamorphous', cursive;
+}
+
+.overview-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single-movie-overview {
+  font-family: 'Swanky and Moo Moo', cursive;
+  font-size: 24px;
+  font-weight: normal;
+}
