@@ -16,7 +16,7 @@ router.use((req, res, next) => {
 router.get('/', (req, res) => {
   request.get(nowPlayingUrl, (error, response, movieData) => {
     const parsedData = JSON.parse(movieData);
-    res.render('index', { parsedData: parsedData.results });
+    res.render('index', { parsedData: parsedData.results, search: false });
   });
 });
 
@@ -39,7 +39,7 @@ router.post('/search', (req, res) => {
     if (cat === 'person') {
       parsedData.results = parsedData.results[0].known_for;
     }
-    res.render('index', { parsedData: parsedData.results });
+    res.render('index', { parsedData: parsedData.results, search: true });
   });
 });
 
